@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<title>BNP MA BANQUE EN LIGNE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<div id="loginPage" class="login">
+
+<h2>Connexion</h2>
+
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Mot de passe">
+
+<button onclick="login()">Se connecter</button>
+
+<p id="error"></p>
+
+</div>
+
+
+<!-- APPLICATION -->
+
+<div id="app" class="container" style="display:none;">
+
+<div class="sidebar">
+
+<h2>MY BANK ON LINE</h2>
+
+<ul>
+
+<li onclick="showSection('comptes')">Mes comptes</li>
+<li onclick="showSection('operations')">Mes opérations</li>
+<li onclick="showSection('virements')">Virements</li>
+<li onclick="showSection('budget')">Mon budget</li>
+
+</ul>
+
+</div>
+
+
+<div class="main">
+
+<div class="blocked">
+
+! COMPTE BLOQUÉ 
+Pour sanction  imposés  de union européenne contre  des personne liée à la Russie
+
+</div>
+
+
+<!-- COMPTES -->
+
+<div id="comptes" class="section">
+
+<h2>Compte courant</h2>
+
+<p class="iban">
+
+IBAN : FR76 3000 6000 0112 3456 7890 189
+
+</p>
+
+
+<div class="balance">
+
+<span id="balanceValue">12 890.009 €</span>
+
+<button onclick="toggleBalance()">👁</button>
+
+</div>
+
+
+<!-- CARTE BANCAIRE -->
+
+<div class="bank-card">
+
+<div class="chip"></div>
+
+<div class="card-number">
+
+4587 9812 5534 1298
+
+</div>
+
+<div class="card-holder">
+
+JEAN JACQUES BERTHELOT 
+
+</div>
+
+<div class="card-exp">
+
+12/28
+
+</div>
+
+<div class="visa">
+
+VISA
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- OPERATIONS -->
+
+<div id="operations" class="section" style="display:none;">
+
+<h2>Transactions</h2>
+
+<div id="transactions"></div>
+
+</div>
+
+
+<!-- VIREMENTS -->
+
+<div id="virements" class="section" style="display:none;">
+
+<h2>Virement</h2>
+
+<input placeholder="Destinataire">
+
+<input placeholder="IBAN">
+
+<input placeholder="Montant">
+
+<button onclick="blocked()">Envoyer</button>
+
+</div>
+
+
+<!-- BUDGET -->
+
+<div id="budget" class="section" style="display:none;">
+
+<h2>Dépenses</h2>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
